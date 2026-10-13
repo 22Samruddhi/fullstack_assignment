@@ -1,0 +1,843 @@
+/* =====================================================
+   DIVINE — WOMEN'S FASHION
+   Premium Boutique Style
+===================================================== */
+
+
+/* ================= ROOT ================= */
+
+:root {
+    --cream: #fbf5f0;
+    --cream-dark: #f3e5df;
+    --rose: #b97878;
+    --rose-dark: #955c61;
+    --pink: #e8cecb;
+    --brown: #342826;
+    --brown-light: #6e5a55;
+    --white: #ffffff;
+    --border: #eadbd5;
+}
+
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.divine-navbar {
+    background: rgba(251, 245, 240, 0.97);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.divine-logo {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    color: var(--brown) !important;
+}
+
+.navbar-nav {
+    gap: 8px;
+}
+
+.nav-link {
+    position: relative;
+    color: var(--brown) !important;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 15px !important;
+    letter-spacing: 0.4px;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 3px;
+    left: 50%;
+    background: var(--rose);
+    transition: 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 60%;
+    left: 20%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--rose) !important;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-icons a {
+    color: var(--brown);
+    font-size: 21px;
+    transition: 0.3s;
+}
+
+.nav-icons a:hover {
+    color: var(--rose);
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,255,255,0.8),
+            transparent 30%
+        ),
+        linear-gradient(
+            120deg,
+            #f7e8e3,
+            #ead1ce
+        );
+}
+
+.hero-section .row {
+    min-height: 680px;
+}
+
+.hero-content {
+    padding: 70px 8%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-small-text {
+    display: inline-block;
+    color: var(--rose-dark);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    padding-left: 45px;
+    position: relative;
+}
+
+.hero-small-text::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--rose);
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.hero-content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 6vw, 88px);
+    line-height: 0.98;
+    font-weight: 400;
+    color: var(--brown);
+    margin-bottom: 30px;
+}
+
+.hero-content h1 span {
+    color: var(--rose-dark);
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 470px;
+    color: var(--brown-light);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 38px;
+}
+
+.divine-btn {
+    position: relative;
+    background: var(--brown);
+    color: var(--white);
+    border: none;
+    border-radius: 0;
+    padding: 17px 35px;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.divine-btn:hover {
+    background: var(--rose-dark);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(70, 45, 40, 0.18);
+}
+
+.hero-image-container {
+    height: 680px;
+    padding: 25px 35px 25px 0;
+    position: relative;
+}
+
+.hero-image-container::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(149, 92, 97, 0.4);
+    top: 65px;
+    right: 10px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =====================================================
+   BRAND INTRO
+===================================================== */
+
+.brand-intro {
+    background: var(--white);
+    padding: 100px 20px !important;
+}
+
+.section-label {
+    color: var(--rose-dark);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.section-title span {
+    color: var(--rose);
+    font-style: italic;
+}
+
+.section-description {
+    max-width: 650px;
+    color: #796965;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
+
+.categories-section {
+    padding: 110px 0;
+    background: var(--cream);
+}
+
+.category-card {
+    display: block;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    background: var(--cream-dark);
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.08);
+}
+
+.category-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(38, 25, 22, 0.75),
+        rgba(38, 25, 22, 0.05) 65%
+    );
+}
+
+.category-overlay {
+    position: absolute;
+    left: 28px;
+    bottom: 28px;
+    z-index: 2;
+    color: white;
+}
+
+.category-overlay h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 31px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.category-overlay span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   NEW ARRIVALS
+===================================================== */
+
+.new-arrivals-section {
+    background: white;
+    padding: 110px 0;
+}
+
+.view-all {
+    color: var(--brown);
+    font-size: 11px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--brown);
+    padding-bottom: 6px;
+    transition: 0.3s;
+}
+
+.view-all:hover {
+    color: var(--rose);
+    border-color: var(--rose);
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+    background: white;
+    transition: 0.35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+}
+
+.product-image {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+.product-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    background: white;
+    color: var(--brown);
+    padding: 8px 13px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.product-info {
+    padding: 20px 3px;
+}
+
+.product-info h5 {
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--brown);
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: var(--rose-dark);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   DIVINE MESSAGE
+===================================================== */
+
+.divine-message {
+    position: relative;
+    padding: 130px 20px;
+    background:
+        linear-gradient(
+            rgba(238, 215, 210, 0.88),
+            rgba(238, 215, 210, 0.88)
+        ),
+        url("../images/hero.jpg") center/cover;
+    background-attachment: fixed;
+}
+
+.divine-message::before,
+.divine-message::after {
+    content: "✦";
+    position: absolute;
+    color: var(--rose);
+    font-size: 28px;
+}
+
+.divine-message::before {
+    top: 60px;
+    left: 10%;
+}
+
+.divine-message::after {
+    bottom: 60px;
+    right: 10%;
+}
+
+.divine-message h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 38px;
+}
+
+.divine-message h2 span {
+    color: var(--rose-dark);
+    font-style: italic;
+}
+
+.divine-outline-btn {
+    border: 1px solid var(--brown);
+    color: var(--brown);
+    background: transparent;
+    padding: 14px 30px;
+    border-radius: 0;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    transition: 0.3s;
+}
+
+.divine-outline-btn:hover {
+    background: var(--brown);
+    color: white;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.divine-footer {
+    background: #2d2220;
+    color: #eee4df;
+    padding: 80px 0 25px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    letter-spacing: 7px;
+    margin-bottom: 20px;
+}
+
+.divine-footer p {
+    color: #bcaeaa;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.divine-footer h5 {
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    margin-bottom: 22px;
+}
+
+.divine-footer a {
+    display: block;
+    color: #bcaeaa;
+    font-size: 13px;
+    margin-bottom: 13px;
+    transition: 0.3s;
+}
+
+.divine-footer a:hover {
+    color: #e8c8c4;
+    padding-left: 4px;
+}
+
+.divine-footer hr {
+    border-color: #564744;
+    margin: 50px 0 20px;
+}
+
+.copyright {
+    color: #94837e !important;
+    font-size: 10px !important;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .divine-navbar {
+        padding: 16px 0;
+    }
+
+    .navbar-nav {
+        margin-top: 20px;
+    }
+
+    .nav-icons {
+        margin-top: 15px;
+    }
+
+    .hero-section .row {
+        min-height: auto;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 70px 30px;
+    }
+
+    .hero-small-text {
+        padding-left: 0;
+    }
+
+    .hero-small-text::before {
+        display: none;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image-container {
+        height: 600px;
+        padding: 20px;
+    }
+
+    .hero-image-container::before {
+        display: none;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .divine-logo {
+        font-size: 23px;
+        letter-spacing: 5px;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    .hero-image-container {
+        height: 500px;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .categories-section,
+    .new-arrivals-section {
+        padding: 75px 0;
+    }
+
+    .category-card {
+        height: 400px;
+    }
+
+    .product-image {
+        height: 430px;
+    }
+
+    .divine-message {
+        padding: 90px 20px;
+        background-attachment: scroll;
+    }
+}
+/* =====================================================
+   INNER PAGES
+===================================================== */
+
+.page-header {
+    padding: 100px 20px;
+    background:
+        linear-gradient(
+            120deg,
+            #f3dfda,
+            #ead0cc
+        );
+}
+
+.page-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 6vw, 70px);
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.page-header h1 span {
+    color: var(--rose-dark);
+    font-style: italic;
+}
+
+.page-header p:last-child {
+    color: var(--brown-light);
+    font-size: 14px;
+}
+
+
+/* SHOP */
+
+.shop-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+
+/* ABOUT */
+
+.about-story {
+    padding: 110px 0;
+    background: #fff;
+}
+
+.about-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.about-title {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.about-title span {
+    color: var(--rose);
+    font-style: italic;
+}
+
+.about-story p:not(.section-label) {
+    color: var(--brown-light);
+    line-height: 1.9;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+
+/* VALUES */
+
+.values-section {
+    padding: 110px 0;
+    background: var(--cream);
+}
+
+.value-box {
+    background: white;
+    padding: 45px 35px;
+    height: 100%;
+    border: 1px solid var(--border);
+    transition: 0.3s ease;
+}
+
+.value-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(70, 45, 40, 0.08);
+}
+
+.value-number {
+    color: var(--rose);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.value-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.value-box p {
+    color: var(--brown-light);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* CONTACT */
+
+.contact-section {
+    padding: 110px 0;
+    background: white;
+}
+
+.contact-title {
+    font-family: "Playfair Display", serif;
+    font-size: 52px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.contact-title span {
+    color: var(--rose);
+    font-style: italic;
+}
+
+.contact-section p {
+    color: var(--brown-light);
+    line-height: 1.8;
+}
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info div {
+    margin-bottom: 25px;
+}
+
+.contact-info strong {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-info p {
+    margin-top: 5px;
+}
+
+
+.contact-form {
+    background: var(--cream);
+    padding: 45px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 9px;
+}
+
+.contact-form .form-control {
+    border: 1px solid var(--border);
+    border-radius: 0;
+    background: white;
+    padding: 14px;
+    font-size: 13px;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--rose);
+    box-shadow: none;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+
+/* INNER PAGE MOBILE */
+
+@media (max-width: 768px) {
+
+    .page-header {
+        padding: 75px 20px;
+    }
+
+    .about-story,
+    .values-section,
+    .contact-section,
+    .shop-section {
+        padding: 75px 20px;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .about-title,
+    .contact-title {
+        font-size: 40px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+}
